@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Bài 3: Nhập vào mảng 1 chiều gồm 5 phần tử bàn phím.
+    - Sử dụng for..in để in ra các phần tử của mảng
+    - Sử dụng for..of để in ra các phần tử lẻ trong mảng
+    - Sử dung for để in ra các phần tử từ cuối lên đầu
+        */
+
+        // khai báo mảng
+        let arr = [];
+
+        // nhập dư x liệu từ bàn phím
+        for (let i = 0; i < 5; i++) {
+            arr[i] = prompt("Nhập vào số thứ " + (i + 1));
+        }
+
+        // in ra các phần tử = for-in
+        for (const key in arr) {
+            console.log(arr[key])
+
+        }
+        // in ra các số lẻ bằng for -of
+        for (const iterator of arr) {
+            if (iterator % 2 != 0) {
+                console.log(iterator);
+            }
+
+        }
+
+        //in ra các phần tử từ cuối lên
+        console.log("Sắp xếp mảng theo thứ tự giảm dần (sử dụng hàm sort)là:");
+        arrayInt.sort((a, b) => b - a);
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>

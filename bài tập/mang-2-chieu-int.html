@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrInt = [];
+        let row, col;
+        row = +prompt("Nhập số dòng n");
+        col = +prompt("Nhập số cột m");
+
+        // dòng
+        for (let i = 0; i < row; i++) {
+            let arrRow = [];
+            //cột
+            for (let j = 0; j < col; j++) {
+                let number = +prompt("Nhập vào 1 số: ");
+                arrRow.push(number);
+            }
+            arrInt.push(arrRow);
+
+        }
+        console.log(arrInt);
+
+        console.log("IN ra cacs phần tử nằm trên đường biên");
+
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                if (i == 0 || j == 0 || i == row - 1 || j == col - 1) {
+                    console.log(arrInt[i][j]);
+                }
+            }
+        }
+        // các phần tử nằm trên đường chéo chính
+        console.log("Đường chéo chính");
+        if (row == col) {
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < col; j++) {
+                    if (i == j) {
+                        console.log(arrInt[i][j]);
+
+                    }
+                }
+            }
+            console.log("đường chéo phụ");
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < col; j++) {
+                    if (i + j == col - 1) {
+                        console.log(arrInt[i][j]);
+
+                    }
+                }
+            }
+        } else {
+            console.log("mảng không có đường chéo chính và phụ");
+        }
+        console.log("sắp xếp theo thứ tự tăng dần");
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                for (let index = j + 1; index < col; index++) {
+                    if (arrInt[i][j] > arrInt[i][index]) {
+                        let temp;
+                        temp = arrInt[i][j];
+                        arrInt[i][j] = arrInt[i][index];
+                        arrInt[i][index] = temp;
+                    }
+
+                }
+            }
+        }
+        console.log(arrInt);
+
+
+
+    </script>
+
+</body>
+
+</html>

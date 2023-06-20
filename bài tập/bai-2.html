@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Bài 2: Nhập số dòng (n) và số cột (m). Nhập dữ liệu cho mảng 
+        2 chiều gồm n dong và m cột. In ra phần tử có giá trị max, min
+        */
+
+        let arr = [];
+        let m, n;
+        n = +prompt("Nhập số dòng n");
+        m = +prompt("Nhập số cột m");
+
+        for (let index = 0; index < m; index++) {
+            arr[index] = [];
+
+        }
+
+        // dòng
+        for (let i = 0; i < n; i++) {
+            //cột
+            for (let j = 0; j < m; j++) {
+                arr[i][j] = +prompt("Nhập vào dòng" + i + "cột" + j);
+            }
+        }
+        console.log(arr);
+
+       
+    </script>
+</body>
+
+</html>

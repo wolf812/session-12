@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Bài 1: Khai báo mảng 1 chiều kiểu số, nhập 5 phần tử từ 
+            bàn phím,duyệt mảng và in ra các phần tử là số chẵn (push)
+             - Xóa phần tử ở cuối mảng
+             - Thêm 2 phần tử có giá trị là 1,2 ở đẩu mảng (unshift)
+             - Xóa phần tử đầu tiên của mảng (shift)
+        */
+
+        let arr = [];
+
+        for (let i = 0; i < 5; i++) {
+            arr[i] = +prompt("Nhập vào 1 số ");
+            if (arr[i] % 2 == 0) {
+                console.log(arr[i]);
+            }
+
+        }
+        arr.pop();
+        console.log("sau khi xóa 1 kí tự là", arr);
+        arr.unshift(1, 2);
+        console.log("Sau khi thêm 1 và 2", arr);
+        arr.shift();
+        console.log("Sau khi xóa ", arr);
+    </script>
+
+</body>
+
+</html>

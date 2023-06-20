@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo mảng 1 chiều</title>
+</head>
+
+<body>
+    <script>
+        let arrayInt = [];
+        let tongChan = 0;
+        let tongLe = 0;
+
+
+        // nhập 5 gtri từ bàn phím.
+        for (let i = 0; i < 5; i++) {
+            arrayInt[i] = +prompt("Nhập vào số thứ " + (i + 1));
+        }
+
+
+        //hiển thị mảng
+        console.log(arrayInt);
+
+        // in phần tử chẵn, tính tổng
+        for (let index = 0; index < arrayInt.length; index++) {
+            if (arrayInt[index] % 2 == 0) {
+                console.log(arrayInt[index]);
+                tongChan += arrayInt[index];
+            }
+
+        }
+        console.log("Tổng = " + tongChan);
+
+        //in số lẻ
+        for (let j = 0; j < arrayInt.length; j++) {
+            if (arrayInt[j] % 2 != 0) {
+                console.log(arrayInt[j]);
+                tongLe += arrayInt[j];
+            }
+
+        }
+        console.log("Tổng = " + tongLe);
+
+
+        //g Sắp xếp mảng giảm dần - Bubble soft, Selection soft, Ínertion soft
+        for (let i = 0; a < arrayInt.length - 1; i++) {
+            // max i = arrayInt.length -2
+            for (let j = i + 1; j < arrayInt.length; j++) {
+                // max j = arrayInt.leght -1
+                // so sánh arrayInt[i] với arrayInt[j]
+                if (arrayInt[i] < arrayInt[j]) {
+                    // đổi chỗ 2 phần tử
+                    let temp = arrayInt[i];
+                    arrayInt[i] = arrayInt[j];
+                    arrayInt[j] = temp;
+
+
+                }
+            }
+        }   
+        // in ra mảng sau khi sắp xếp
+        console.log("mảng sau khi sắp xếp là", arrayInt) ;
+        
+
+        //h nhập vào 1 số thổng kê bao nhiều phần tử đó
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
